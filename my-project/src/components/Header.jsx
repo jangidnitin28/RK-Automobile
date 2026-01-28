@@ -19,16 +19,17 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="bg-[rgb(71,84,148)] text-white relative">
+    <header className="bg-[rgb(38,51,70)] border-b-2 border-[rgb(245,245,245)] text-white relative">
       <div className="flex items-center justify-between p-4">
         {/* Logo */}
         <div className="flex items-center gap-4">
           <img src={Logo} alt="Logo" className="w-12 rounded-full" />
-          <h2 className="text-xl font-bold hidden sm:block">RK Automobile</h2>
+          <h2 className="text-2xl  font-bold hidden sm:block font-serif">RK Automobile
+          <h6 className="text-[10px] ">Quality you can trust - Prices you'll love.</h6></h2>
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden sm:flex gap-6 text-lg font-medium">
+        <nav className="hidden sm:flex gap-24 text-xl font-medium mr-12 font-serif">
           <a href="#" className="hover:scale-110">Home</a>
           <a href="#" className="hover:scale-110">Vehicles</a>
           <a href="#" className="hover:scale-110">Contact</a>
@@ -50,7 +51,7 @@ export default function Header() {
 
           {/* Inline Pop Menu */}
           {isOpen && (
-            <div className="absolute right-0 mt-2 bg-[rgb(71,84,148)] border border-white rounded shadow-lg p-4 flex flex-col gap-4 z-50">
+            <div className="absolute right-0 mt-2 bg-[rgb(49,76,211)] border border-white rounded shadow-lg p-4 flex flex-col gap-4 z-50 font-serif">
               <a href="#">Home</a>
               <a href="#">Vehicles</a>
               <a href="#">Contact</a>
@@ -58,6 +59,7 @@ export default function Header() {
           )}
         </div>
       </div>
+
     </header>
   )
 }
