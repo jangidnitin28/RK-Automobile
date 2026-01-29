@@ -1,5 +1,5 @@
-import Landing from "./Landing"
-import List from "./VehiclesList"
+import Landing from "./Landing";
+import List from "./VehiclesList";
 
 function Home() {
   return (

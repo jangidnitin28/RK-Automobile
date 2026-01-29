@@ -1,41 +1,81 @@
-import React, { useState, useEffect, useRef } from 'react'
-import Logo from "../assets/images/nitin.jpg"
+import React, { useState, useEffect, useRef } from 'react';
+import Logo from "../assets/images/RK.jpeg";
+import { NavLink } from "react-router-dom";
+
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const menuRef = useRef(null) // menu ke liye reference
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
 
-  // Outside click handler
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsOpen(false) // agar bahar click hua to band kar do
+        setIsOpen(false);
       }
     }
-    document.addEventListener("click", handleClickOutside)
+    document.addEventListener("click", handleClickOutside);
     return () => {
-      document.removeEventListener("click", handleClickOutside)
-    }
-  }, [])
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <header className="bg-[rgb(38,51,70)] border-b-2 border-[rgb(245,245,245)] text-white relative">
+    <header className="fixed top-0 left-0 w-full 
+      bg-gradient-to-r from-[#3e79a8] via-[#9175dd] to-[#8e5fcc] 
+      bg-opacity-70 backdrop-blur-md 
+      border-b border-white/30 
+      text-white z-50 shadow-lg shadow-blue-900/50">
+      
       <div className="flex items-center justify-between p-4">
-        {/* Logo */}
+        
+        {/* Logo + Title */}
         <div className="flex items-center gap-4">
-          <img src={Logo} alt="Logo" className="w-12 rounded-full" />
-          <h2 className="text-2xl  font-bold hidden sm:block font-serif">RK Automobile
-          <h6 className="text-[10px] ">Quality you can trust - Prices you'll love.</h6></h2>
+          <img src={Logo} alt="Logo" className="w-12 rounded-full shadow-md" />
+          <div>
+            <h2 className="text-2xl font-bold hidden sm:block font-serif drop-shadow-lg">
+              RK Automobile
+            </h2>
+            <h6 className="text-[10px] opacity-90">
+              Quality you can trust - Prices you'll love.
+            </h6>
+          </div>
         </div>
 
-        {/* Desktop Menu */}
+        {/* Desktop Nav */}
         <nav className="hidden sm:flex gap-24 text-xl font-medium mr-12 font-serif">
-          <a href="#" className="hover:scale-110">Home</a>
-          <a href="#" className="hover:scale-110">Vehicles</a>
-          <a href="#" className="hover:scale-110">Contact</a>
+          <NavLink 
+            to="/" 
+            className={({ isActive }) =>
+              `hover:scale-110 transition ${
+                isActive ? "text-[#ebe700] font-bold" : ""
+              }`
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink 
+            to="/vehicles" 
+            className={({ isActive }) =>
+              `hover:scale-110 transition ${
+                isActive ? "text-[#ebe700] font-bold" : ""
+              }`
+            }
+          >
+            Vehicles
+          </NavLink>
+          <NavLink 
+            to="/contact" 
+            className={({ isActive }) =>
+              `hover:scale-110 transition ${
+                isActive ? "text-[#ebe700] font-bold" : ""
+              }`
+            }
+          >
+            Contact
+          </NavLink>
         </nav>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Menu */}
         <div className="sm:hidden relative" ref={menuRef}>
           <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
             {isOpen ? (
@@ -51,15 +91,31 @@ export default function Header() {
 
           {/* Inline Pop Menu */}
           {isOpen && (
-            <div className="absolute right-0 mt-2 bg-[rgb(49,76,211)] border border-white rounded shadow-lg p-4 flex flex-col gap-4 z-50 font-serif">
-              <a href="#">Home</a>
-              <a href="#">Vehicles</a>
-              <a href="#">Contact</a>
+            <div className="absolute right-0 mt-2 
+             bg-gradient-to-r from-[#3e79a8] via-[#9175dd] to-[#8e5fcc] 
+      bg-opacity-70 backdrop-blur-md 
+              border border-white/30 rounded-lg shadow-lg p-4 
+              flex flex-col gap-4 z-50 font-serif">
+              
+              <NavLink to="/" onClick={() => setIsOpen(false)}
+                className={({ isActive }) => isActive ? "text-[#ebe700] font-bold" : ""}
+              >
+                Home
+              </NavLink>
+              <NavLink to="/vehicles" onClick={() => setIsOpen(false)}
+                className={({ isActive }) => isActive ? "text-[#ebe700] font-bold" : ""}
+              >
+                Vehicles
+              </NavLink>
+              <NavLink to="/contact" onClick={() => setIsOpen(false)}
+                className={({ isActive }) => isActive ? "text-[#ebe700] font-bold" : ""}
+              >
+                Contact
+              </NavLink>
             </div>
           )}
         </div>
       </div>
-
     </header>
-  )
+  );
 }

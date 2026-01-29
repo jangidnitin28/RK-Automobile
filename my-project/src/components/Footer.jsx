@@ -8,7 +8,6 @@ export default function Footer() {
     <div className="mt-18 bg-[rgb(31,41,55)] text-white">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-18 p-28">
         
-        {/* About Section */}
         <div>
           <h2 className="text-2xl font-bold p-4">RK Automobile</h2>
           <h3>
@@ -16,7 +15,6 @@ export default function Footer() {
           </h3>
         </div>
 
-        {/* Contact Section */}
         <div>
           <h2 className="text-2xl font-bold p-4">Contact Us</h2>
           <img src={Location} alt="location" className="w-6 inline mr-2" />
@@ -31,7 +29,6 @@ export default function Footer() {
           <a href="mailto:sutharrahul936@gmail.com">sutharrahul936@gmail.com</a>
         </div>
 
-        {/* Location Section */}
         <div>
           <h2 className="text-2xl font-bold p-4">Location</h2>
           <iframe
@@ -46,9 +43,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Copyright */}
       <h3 className="flex items-center justify-center border-t-2 py-4 gap-16">
-        &copy; 2014 RK Automobile. All rights reserved.
+        &copy; 2024 Nitss(CherryPik) All rights reserved.
         <h3>Owned by RK Finance Pvt. Ltd</h3>
       </h3>
       
