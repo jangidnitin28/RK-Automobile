@@ -1,5 +1,5 @@
 import React from 'react';
-import Whatsapp from '../assets/images/Whatsapp.png';
+import Whatsapp from '../assets/images/Whats_app.png';
 import Call from "../assets/images/call.png";
 import Insta from '../assets/images/Instagram.png';
 

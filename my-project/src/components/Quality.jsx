@@ -3,7 +3,7 @@ import Fast from '../assets/images/fast.png';
 import Trust from '../assets/images/verified.png';
 import Doc from '../assets/images/doc.png';
 import Hour from '../assets/images/hours.png';
-import Whatsapp from '../assets/images/Whatsapp.png';
+import Whatsapp from '../assets/images/Whats_app.png';
 import Mail from '../assets/images/mail.png';
 import Insta from '../assets/images/Instagram.png';
 
