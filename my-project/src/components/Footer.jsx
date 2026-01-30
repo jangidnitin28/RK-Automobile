@@ -23,7 +23,7 @@ export default function Footer() {
           <img src={Call} alt="Call" className="w-6 inline mr-2" />
           <span>+91 9462021726</span><br />
           <span>+91 8290808214</span><br />
-          <span>+91 8742847320</span>
+          <span>+91 8742847302</span>
           <br />
           <img src={Mail} alt="mail" className="w-6 inline mr-2" />
           <a href="mailto:sutharrahul936@gmail.com">sutharrahul936@gmail.com</a>

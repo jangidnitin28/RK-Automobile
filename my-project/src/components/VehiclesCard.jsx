@@ -10,7 +10,6 @@ export default function VehiclesCard({ title, description, price, image }) {
         <p className="text-[rgb(35,53,65)]">{description}</p>
         <p className="text-[rgb(35,53,65)] font-medium">{price}</p>
 
-        {/* ✅ Step 2 & 3: Wrap button in NavLink and pass state */}
         <NavLink
           to="/ViewDetail"
           state={{ car: { title, description, price, image } }}

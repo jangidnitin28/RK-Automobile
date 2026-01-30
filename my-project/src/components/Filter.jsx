@@ -8,7 +8,6 @@ export default function Filter({ search, setSearch }) {
     <div className="w-full max-w-lg p-4">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         
-        {/* Search Input */}
         <div className="relative w-full md:flex-1">
           <input
             type="text"
@@ -22,7 +21,6 @@ export default function Filter({ search, setSearch }) {
           <span className="absolute left-4 top-3 text-gray-400">🔍</span>
         </div>
 
-        {/* Right side content */}
         <div className="flex items-center gap-4 justify-center md:justify-end">
           <h3 className="bg-yellow-300 text-2xl font-bold px-2 rounded">Book Now..</h3>
           <a href="https://wa.me/8290808214" target="_blank"><img src={Whatsapp} alt="WhatsApp" className="w-12 hover:cursor-pointer" /></a>

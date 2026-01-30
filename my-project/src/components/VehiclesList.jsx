@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import VehiclesCard from './VehiclesCard';
 import Quality from './Quality';
 import { Link } from "react-router-dom";
-import Shimmer from "./LandingShimmer"; // 👈 Shimmer import
+import Shimmer from "./LandingShimmer";
 
 export default function VehiclesList() {
   const [data, setData] = useState([]);
@@ -21,7 +21,7 @@ export default function VehiclesList() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
         {data.length === 0
-          ? [...Array(6)].map((_, i) => <Shimmer key={i} />) // 👈 Show shimmer while loading
+          ? [...Array(6)].map((_, i) => <Shimmer key={i} />)
           : data.slice(0, 6).map((item, index) => (
               <VehiclesCard
                 key={index}

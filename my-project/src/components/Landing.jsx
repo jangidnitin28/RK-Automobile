@@ -14,7 +14,7 @@ export default function Landing() {
         <h4 className="text-base md:text-lg max-w-xl font-serif text-center md:text-left">
           Find your perfect Car, Bike, or Commercial vehicle from our verified collection.
         </h4>
-        {/* RK Logo */}
+        
         <div className="flex justify-center md:justify-end">
           <img src={RK} alt="RK Logo" className="w-48 p-4 border-2 rounded-4xl md:hidden m-12 bg-white" />
         </div>

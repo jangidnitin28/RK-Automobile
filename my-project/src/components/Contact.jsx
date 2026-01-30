@@ -15,7 +15,6 @@ const Contact = () => {
         </p>
 
         <div className="grid grid-cols-2 gap-6">
-          {/* Mail */}
           <a
             href="mailto:sutharrahul936@gmail.com"
             className="flex flex-col items-center p-4 rounded-lg shadow hover:bg-cyan-50 transition"
@@ -24,9 +23,8 @@ const Contact = () => {
             <span className="text-gray-700 font-medium">Email</span>
           </a>
 
-          {/* WhatsApp */}
           <a
-            href="https://wa.me/+918742847320"
+            href="https://wa.me/+918742847302"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center p-4 rounded-lg shadow hover:bg-green-50 transition"
@@ -35,7 +33,6 @@ const Contact = () => {
             <span className="text-gray-700 font-medium">WhatsApp</span>
           </a>
 
-          {/* Instagram */}
           <a
             href="https://www.instagram.com/rk_automobile5655/"
             target="_blank"

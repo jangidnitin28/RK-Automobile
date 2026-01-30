@@ -27,8 +27,7 @@ export default function Header() {
       text-white z-50 shadow-lg shadow-blue-900/50">
       
       <div className="flex items-center justify-between p-4">
-        
-        {/* Logo + Title */}
+
         <div className="flex items-center gap-4">
           <img src={Logo} alt="Logo" className="w-12 rounded-full shadow-md" />
           <div>
@@ -41,7 +40,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Desktop Nav */}
         <nav className="hidden sm:flex gap-24 text-xl font-medium mr-12 font-serif">
           <NavLink 
             to="/" 
@@ -75,7 +73,6 @@ export default function Header() {
           </NavLink>
         </nav>
 
-        {/* Mobile Menu */}
         <div className="sm:hidden relative" ref={menuRef}>
           <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
             {isOpen ? (
@@ -89,7 +86,6 @@ export default function Header() {
             )}
           </button>
 
-          {/* Inline Pop Menu */}
           {isOpen && (
             <div className="absolute right-0 mt-2 
              bg-gradient-to-r from-[#3e79a8] via-[#9175dd] to-[#8e5fcc] 
